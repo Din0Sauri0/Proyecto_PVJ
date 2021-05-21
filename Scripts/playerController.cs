@@ -34,6 +34,17 @@ public class playerController : MonoBehaviour
         
     }
 
+    void OnTriggerEnter2D(Collider2D other) {
+        string gameTag = other.gameObject.tag;
+        if(other.gameObject.CompareTag("life")){
+            Debug.Log(other.gameObject.tag);
+            Destroy(other.gameObject);
+            lifeAdmin(gameTag);
+        }
+
+    }
+
+
     private void OnCollisionEnter2D(Collision2D col) 
     {
         string gameTag = col.gameObject.tag;
