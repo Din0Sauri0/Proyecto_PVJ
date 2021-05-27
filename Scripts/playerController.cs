@@ -49,8 +49,8 @@ public class playerController : MonoBehaviour
     {
         string gameTag = col.gameObject.tag;
         lifeAdmin(gameTag);
-        if(col.gameObject.tag.Equals("pinchos")){
-            transform.position = new Vector2(-11, 0);
+        if(gameTag.Equals("pinchos") || gameTag.Equals("enemy")){
+            transform.position = new Vector2(-9, 0);
         }
         
     }
